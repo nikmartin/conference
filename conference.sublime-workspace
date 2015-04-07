@@ -32,24 +32,34 @@
 	"buffers":
 	[
 		{
-			"contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width\">\n    <title></title>\n\n    <link href=\"lib/ionic/css/ionic.css\" rel=\"stylesheet\">\n    <link href=\"css/style.css\" rel=\"stylesheet\">\n\n    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above\n    <link href=\"css/ionic.app.css\" rel=\"stylesheet\">\n    -->\n\n    <!-- ionic/angularjs js -->\n    <script src=\"lib/ionic/js/ionic.bundle.js\"></script>\n\n    \n\n    <!-- your app's js -->\n    <script src=\"js/app.js\"></script>\n    <script src=\"js/controllers.js\"></script>\n    <!-- cordova script (this will be a 404 during development) -->\n    <script src=\"cordova.js\"></script>\n  </head>\n\n  <body ng-app=\"starter\">\n    <ion-nav-view></ion-nav-view>\n  </body>\n</html>\n",
 			"file": "www/index.html",
-			"file_size": 858,
-			"file_write_time": 130728115858496304,
 			"settings":
 			{
-				"buffer_size": 863,
+				"buffer_size": 968,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "// Ionic Starter App\n\n// angular.module is a global place for creating, registering and retrieving Angular modules\n// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)\n// the 2nd parameter is an array of 'requires'\n// 'starter.controllers' is found in controllers.js\nangular.module('starter', ['ionic', 'starter.controllers'])\n\n.run(function($ionicPlatform) {\n  $ionicPlatform.ready(function() {\n    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard\n    // for form inputs)\n    if (window.cordova && window.cordova.plugins.Keyboard) {\n      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);\n    }\n    if (window.StatusBar) {\n      // org.apache.cordova.statusbar required\n      StatusBar.styleDefault();\n    }\n  });\n})\n\n.config(function($stateProvider, $urlRouterProvider) {\n  $stateProvider\n\n    .state('app', {\n    url: \"/app\",\n    abstract: true,\n    templateUrl: \"templates/menu.html\",\n    controller: 'AppCtrl'\n  })\n\n  .state('app.search', {\n    url: \"/search\",\n    views: {\n      'menuContent': {\n        templateUrl: \"templates/search.html\"\n      }\n    }\n  })\n\n  .state('app.browse', {\n      url: \"/browse\",\n      views: {\n        'menuContent': {\n          templateUrl: \"templates/browse.html\"\n        }\n      }\n    })\n    .state('app.playlists', {\n      url: \"/playlists\",\n      views: {\n        'menuContent': {\n          templateUrl: \"templates/playlists.html\",\n          controller: 'PlaylistsCtrl'\n        }\n      }\n    })\n\n  .state('app.single', {\n    url: \"/playlists/:playlistId\",\n    views: {\n      'menuContent': {\n        templateUrl: \"templates/playlist.html\",\n        controller: 'PlaylistCtrl'\n      }\n    }\n  });\n  // if none of the above states are matched, use this as the fallback\n  $urlRouterProvider.otherwise('/app/playlists');\n});\n",
+			"file": "www/js/controllers.js",
+			"settings":
+			{
+				"buffer_size": 1148,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "www/js/app.js",
-			"file_size": 1847,
-			"file_write_time": 130728115858496304,
 			"settings":
 			{
 				"buffer_size": 1863,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/services.js",
+			"settings":
+			{
+				"buffer_size": 166,
 				"line_ending": "Unix"
 			}
 		}
@@ -91,9 +101,9 @@
 	},
 	"expanded_folders":
 	[
+		"/home/nmartin/Projects/ionic/conference",
 		"/home/nmartin/Projects/ionic/conference/www",
 		"/home/nmartin/Projects/ionic/conference/www/js",
-		"/home/nmartin/Projects/ionic/conference/www/lib",
 		"/home/nmartin/Projects/ionic/conference/www/lib/ionic",
 		"/home/nmartin/Projects/ionic/conference/www/lib/ionic/js"
 	],
@@ -145,7 +155,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -154,15 +164,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 863,
+						"buffer_size": 968,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								523,
-								523
+								725,
+								725
 							]
 						],
 						"settings":
@@ -175,11 +185,41 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "www/js/controllers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1148,
+								1148
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 84.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "www/js/app.js",
 					"semi_transient": false,
 					"settings":
@@ -205,7 +245,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/js/services.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1,
+								1
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
